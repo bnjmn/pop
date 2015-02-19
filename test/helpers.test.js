@@ -45,7 +45,7 @@ exports['test pagination template generation'] = function() {
   paginator = new Paginator(config.perPage, siteBuilder.posts);
   html = helpers.paginate.apply(siteBuilder, [paginator]);
   
-  expected = '\n<div class="pages"><span class="prev_next"><strong class="page">1</strong><a href="/page2/" class="page">2</a><a href="/page3/" class="page">3</a><a href="/page4/" class="page">4</a><a href="/page5/" class="page">5</a><a href="/page2/" class="next">Next</a><span>&rarr;</span></span>\n</div>';
+  expected = '\n<div class="pages"><span class="prev_next"><strong class="page">1</strong><a href="/page2/" class="page">2</a><a href="/page3/" class="page">3</a><a href="/page4/" class="page">4</a><a href="/page2/" class="next">Next</a><span>&rarr;</span></span>\n</div>';
 
   assert.equal(html, expected);
 };
